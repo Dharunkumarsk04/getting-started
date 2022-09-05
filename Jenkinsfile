@@ -11,6 +11,7 @@ node {
       }
     }catch(e){
         def error = "${e}"
+        echo e
     }
     
 }
