@@ -9,9 +9,10 @@ node {
     stage('Build Image'){
         try{
             sh "docker build -t docker/getting-started ."
-            }catch(Exception e){
-                def error = "${e}"
-                echo $error
+            }catch(e){
+//                 def error = "${e}"
+//                 echo $error
+            echo 'Err: Incremental Build failed with Error: ' + e.toString()
             }
       }
 }
