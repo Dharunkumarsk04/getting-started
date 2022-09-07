@@ -8,7 +8,7 @@ node {
     
     stage('Build Image'){
         try{
-            sh "docker build -t docker/getting-started ."
+            sh "docker build -t docker/getting-started .| tee build.log"
             }catch(e){
 //                 def error = "${e}"
 //                 echo $error
