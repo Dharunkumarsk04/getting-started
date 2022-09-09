@@ -7,7 +7,7 @@ const Screenshot = async () => {                // Define Screenshot function
 //    const browser = await puppeteer.launch();    // Launch a "browser"
 
    const browser = await puppeteer.launch({
-     executablePath: '/usr/bin/chromium-browser'
+     executablePath: '/usr/bin/chromium'
    })
    const page = await browser.newPage();        // Open a new page
  
