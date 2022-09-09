@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');         // Require Puppeteer module
  
-const url = "https://www.testim.io/";           // Set website you want to screenshot
+const url = "https://devops.beemyguest.jp/job/test/lastBuild/logText/progressiveText?start=0";           // Set website you want to screenshot
  
 const Screenshot = async () => {                // Define Screenshot function
  
