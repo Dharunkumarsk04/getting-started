@@ -9,7 +9,7 @@ node {
     stage('Build Image'){
         try{
             sh "npm i puppeteer --save"
-            sh "sudo npm i chromium -g"
+            sh "npm i chromium"
             sh "docker build -t docker/getting-started .| tee build.log"
             sh "node code.js"
             }catch(e){
