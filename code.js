@@ -4,7 +4,26 @@ const url = "https://devops.beemyguest.jp/job/test/lastBuild/logText/progressive
  
 const Screenshot = async () => {                // Define Screenshot function
  
-   const browser = await puppeteer.launch();    // Launch a "browser"
+//    const browser = await puppeteer.launch();    // Launch a "browser"
+   const PCR = require("puppeteer-chromium-resolver");
+   const option = {
+       revision: "",
+       detectionPath: "",
+       folderName: ".chromium-browser-snapshots",
+       defaultHosts: ["https://storage.googleapis.com", "https://npm.taobao.org/mirrors"],
+       hosts: [],
+       cacheRevisions: 2,
+       retry: 3,
+       silent: false
+   };
+   const stats = await PCR(option);
+   const browser = await stats.puppeteer.launch({
+        headless: false,
+        args: ["--no-sandbox"],
+        executablePath: stats.executablePath
+    }).catch(function(error) {
+        console.log(error);
+    });
 
 //    const browser = await puppeteer.launch({
 //      executablePath: '/usr/bin/chromium'
