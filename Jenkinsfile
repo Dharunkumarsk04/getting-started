@@ -15,7 +15,7 @@ node {
             }catch(e){
 //                 def error = "${e}"
 //                 echo $error
-            echo 'Err: Incremental Build failed with Error: ' + e.toString()
+                  echo 'Err: Incremental Build failed with Error: ' + e.toString()
             }
       }
 }
