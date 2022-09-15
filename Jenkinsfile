@@ -8,7 +8,7 @@ node {
     
     stage('Build Image'){
         try{
-            sh "npm install puppeteer --save"
+            sh "npm i puppeteer --save"
             sh "npm install puppeteer-chromium-resolver"
             sh "npm install chromium"
             sh "docker build -t docker/getting-started .| tee build.log"
