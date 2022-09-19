@@ -14,7 +14,6 @@ node {
 //             sh "npm install puppeteer-chromium-resolver"
 //             sh "npm install chromium"
             sh "apt-get install libatk-bridge2.0-0"
-            sh '
             sh "docker build -t docker/getting-started .| tee build.log"
             sh "node code.js"
             }catch(e){
