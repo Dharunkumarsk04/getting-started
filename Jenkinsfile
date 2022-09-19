@@ -8,8 +8,8 @@ node {
     
     stage('Build Image'){
         try{
-            sh 'npm install'
-            sh 'npm i docker'
+            sh "npm install"
+            sh "npm i docker"
             sh "npm i puppeteer --save"
 //             sh "npm install puppeteer-chromium-resolver"
 //             sh "npm install chromium"
